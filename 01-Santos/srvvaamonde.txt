@@ -1,0 +1,81 @@
+Instruções
+Como foi Interligado os Cabos:
+R1 = giga 0/1 e serial 0/0/0
+
+R2 = giga 0/1 e serial 0/0/0
+
+
+
+Switch S1
+
+giga 0/1 com giga 0/1 de R1
+
+giga 0/2 com giga 0/2 de S2
+
+
+
+Switch S3
+
+giga 0/1 com giga 0/1 de R2
+
+
+
+#######################################
+Seguir o roteiro abaixo:
+1 - Criar DHCPv4 no Router R1 para as 2 VLANs
+
+2 - cabos já conectados
+
+3 - Todas as máquinas devem pingar a rede 172.16.16.0/24
+
+4 - configurar senha de console e SSH no s1 e s2 (usar senha class)
+
+5 - Rotas podem ser ESTÁTICAS ou DINÂMICA (OSPF)
+
+
+
+Todos os gateways com o 1º válido
+
+Interface de gerenciamento do S1 --> 192.168.10.46 (vlan 10)
+
+Interface de gerenciamento do S2 --> 192.168.20.158 (vlan 20)
+
+
+
+
+
+PC1 VLAN 10 --> ip use o 2º endereço válido.
+
+PC2 VLAN 10 --> ip use o 3º endereço válido.
+
+
+
+PC1 VLAN 20 --> ip use o 2º endereço válido.
+
+PC2 VLAN 20 --> ip use o 3º endereço válido.
+
+
+
+NUVEM já configurada (WEB e DNS --> 172.16.16.2 mask 255.255.255.0
+
+
+
+Site www.senactito.com.br
+
+
+
+OBS:
+
+Usar senha class para o modo usuario privilegiado em todos os dispositivos;
+
+
+
+Os acessos aos SWITCHES precisa ser via SSH
+
+
+
+Encriptar TODAS as senhas de modo que não fique visivel no running-config
+
+
+Materiais de referência
+
